@@ -327,6 +327,7 @@
                 android:text="C"
                 android:id="@+id/cross_all"
                 android:textAllCaps="false"
+                android:onClick="all_ClearBtn"
                 android:textSize="24sp"
                 android:background="@drawable/btn_design"
                 android:layout_weight="1">
