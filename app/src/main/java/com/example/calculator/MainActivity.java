@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     String sign;
     String check;
+    String finalResult;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -100,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
     public void btnCLick_add(View view) {
         sign="+";
         value1=input.getText().toString();
-        input.setText("");
+        input.setText(null);
         signbox.setText(value1+"+");
     }
     public void btnCLick_sub(View view) {
@@ -140,28 +141,48 @@ public class MainActivity extends AppCompatActivity {
           switch (sign){
               case "+":
                   result=num1+num2;
-                  input.setText(result+"");
+                  finalResult=String.valueOf(result);
+                  if (finalResult.endsWith(".0")){
+                      finalResult=finalResult.replace(".0","");
+                      input.setText(finalResult);
+                  }
+                  //input.setText(result+"");
                   sign=null;
                   signbox.setText(null);
                   check="1";
                   break;
               case "-":
                   result=num1-num2;
-                  input.setText(result+"");
+                  finalResult=String.valueOf(result);
+                  if (finalResult.endsWith(".0")){
+                      finalResult=finalResult.replace(".0","");
+                      input.setText(finalResult);
+                  }
+                  //input.setText(result+"");
                   sign=null;
                   signbox.setText(null);
                   check="1";
                   break;
               case "*":
                   result=num1*num2;
-                  input.setText(result+"");
+                  finalResult=String.valueOf(result);
+                  if (finalResult.endsWith(".0")){
+                      finalResult=finalResult.replace(".0","");
+                      input.setText(finalResult);
+                  }
+                  //input.setText(result+"");
                   sign=null;
                   signbox.setText(null);
                   check="1";
                   break;
               case "/":
                   result=num1/num2;
-                  input.setText(result+"");
+                  finalResult=String.valueOf(result);
+                  if (finalResult.endsWith(".0")){
+                      finalResult=finalResult.replace(".0","");
+                      input.setText(finalResult);
+                  }
+                  //input.setText(result+"");
                   sign=null;
                   signbox.setText(null);
                   check="1";
@@ -176,4 +197,6 @@ public class MainActivity extends AppCompatActivity {
         input.setText(null);
         signbox.setText(null);
     }
+
+
 }

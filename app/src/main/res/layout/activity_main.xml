@@ -234,6 +234,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:id="@+id/cross"
+                android:onClick="crossBtn"
                 android:background="@drawable/btn_design"
                 android:layout_weight="1"
                 android:src="@drawable/ic_baseline_backspace_24">
